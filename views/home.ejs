@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+<h1><%= Header1 %></h1>
+<p>
+  <%= firstParagrah %>
+</p>
+
+<%  posts.forEach(function(element){%>
+  <h1><%= element.titleObject %></h1>
+  <p>
+    <%= element.postObject.substring(0,100) + " ..." %>
+    <a href= "/posts/<%=element.titleObject%>">Read More</a>
+  </p>
+
+<%})%>
+
+<%- include("partials/footer") -%>
